@@ -32,6 +32,4 @@ public class Payment {
     private LocalDateTime time;
     @Column(name = "contract_id")
     private Long contractId;
-    @Column(name = "customer_id")
-    private Long customerId;
 }

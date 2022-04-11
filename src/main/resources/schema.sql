@@ -26,6 +26,5 @@ CREATE TABLE payments
     amount      DECIMAL NOT NULL,
     time        TIMESTAMP DEFAULT NOW(),
     contract_id LONG    NOT NULL,
-    customer_id LONG    NOT NULL,
     FOREIGN KEY (contract_id) REFERENCES contracts (id)
 );

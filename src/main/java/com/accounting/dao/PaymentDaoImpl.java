@@ -55,12 +55,6 @@ public class PaymentDaoImpl implements PaymentDao {
     }
 
     @Override
-    public List<Payment> findAllByCustomer(Long customerId) {
-        return performReturningWithinPersistenceContext(entityManager ->
-                entityManager.createQuery("select a from Payment a where a.customerId = :customerId", Payment.class).getResultList());
-    }
-
-    @Override
     public List<Payment> findAllAmountMoreThan(Long customerId, BigDecimal amount) {
         return performReturningWithinPersistenceContext(entityManager ->
                 entityManager.createQuery("select a.customerId from Payment a where a.amount < :amount", Payment.class).getResultList());

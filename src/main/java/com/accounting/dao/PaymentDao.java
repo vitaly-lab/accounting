@@ -53,14 +53,6 @@ public interface PaymentDao {
 
     /**
      * Returns {@link Payment} instance by its customerId
-     *
-     * @param customerId payment customerIds
-     * @return customerId instance
-     */
-    List<Payment> findAllByCustomer(Long customerId);
-
-    /**
-     * Returns {@link Payment} instance by its customerId
      * Returns {@link Payment} instance by its amount
      *
      * @param customerId payment customerIds
